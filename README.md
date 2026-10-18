@@ -1,2 +1,2 @@
 # MoE-Research
-Central hub for MSc MoE research
+Repo to organize my MSc MoE research
