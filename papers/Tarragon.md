@@ -1,8 +1,8 @@
 ### Link
-- https://arxiv.org/pdf/2601.01310
+- https://arxiv.org/pdf/2601.01310  
 
 ### Domain
-- Failure Resilience, Fault Tolerance
+- Failure Resilience, Fault Tolerance, Independent Services
 
 ### The Problem
 - Existing solutions have poor failure resilience
@@ -22,6 +22,10 @@
 - Exploit separation between expert and attention computation
 - Treats Attention Workers (AWs) and Expert Workers (EWs) as distinct failure domains
 - Reconfiurable datapath to mask failures by rerouting requests to healthy workers
+- Use a table containing routing information about experts
+  - If an expert fails, tokens are routed elsewhere
+- Implements checkpointing for the Attention Workers (treated as a different domain than Expert Workers)
+- **The idea is the separation betwen AWs and EWs and handling failures as separate domains** 
 
 #### Key Findings and Results
 - 
